@@ -1,5 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, Link } from 'react-router-dom'
 
 function Github() {
   return (
@@ -23,43 +23,55 @@ function Github() {
           }}
         > icon
         </div>
-        <div
-          style={{
-            backgroundColor: 'red',
-          }}
-        > project 1
-        </div>
-        <div
-          style={{
-            backgroundColor: 'blue',
-          }}
-        > project 2
-        </div>
-        <div
-          style={{
-            backgroundColor: 'yellow',
-          }}
-        > project 3
-        </div>
+
+
+        <Link to='/github/project1'
+          style={{ textDecoration: 'none' }}
+        >
+          <div
+            style={{
+              backgroundColor: 'black',
+              height: '100%'
+            }}
+          >Project1
+          </div>
+        </Link>
+        <Link to='/github/project2'
+          style={{ textDecoration: 'none' }}
+        >
+          <div
+            style={{
+              backgroundColor: 'blue',
+              height: '100%'
+            }}
+          >Project2
+          </div>
+        </Link>
+        <Link to='/github/project3'
+          style={{ textDecoration: 'none' }}
+        >
+          <div
+            style={{
+              backgroundColor: 'red',
+              height: '100%'
+            }}
+          >project3
+          </div>
+        </Link>
+
+
+
+
         <div
           style={{
             backgroundColor: 'white',
           }}
-        >
+        > link
 
         </div>
       </div>
 
-      <div
-        style={{
-          // display: 'grid',
-          // gridTemplateColumns: '1fr 1.3fr 1.3fr 1.3fr',
-          backgroundColor: 'green',
-        }}
-      >
-
-      </div>
-
+      <Outlet />
 
 
 

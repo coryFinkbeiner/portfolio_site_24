@@ -16,13 +16,8 @@ function Layout() {
 
       <Sidebar />
 
-      {/* <div
-        style={{
-          backgroundColor: 'red',
-        }}
-      > */}
-        <Outlet />
-      {/* </div> */}
+      <Outlet />
+
 
     </div>
 
