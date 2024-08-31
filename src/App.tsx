@@ -1,3 +1,10 @@
+import { initializeApp } from "firebase/app"
+import { getAnalytics } from "firebase/analytics"
+import firebaseConfig from './firebaseConfig'
+
+
+
+
 import { useState } from 'react'
 import React from 'react'
 import './App.css'
@@ -18,6 +25,10 @@ import Project2 from './pages/Project2'
 import Project3 from './pages/Project3'
 
 function App() {
+
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+
   return (
     <RouterProvider
       router={
