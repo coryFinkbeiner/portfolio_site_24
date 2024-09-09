@@ -1,7 +1,8 @@
-import firebaseConfig from './firebaseConfig';
+import { storage } from './firebaseConfig';
+// import { ref } from 'firebase/storage'
 
-import { useState } from 'react'
-import React from 'react'
+import React, { useState } from 'react'
+
 import './App.css'
 import {
   RouterProvider,
@@ -20,6 +21,9 @@ import Project2 from './pages/Project2'
 import Project3 from './pages/Project3'
 
 function App() {
+
+  // const resumeTest = ref(storage, '4_13 Resume .pdf')
+  // console.log(resumeTest)
 
   return (
     <RouterProvider
