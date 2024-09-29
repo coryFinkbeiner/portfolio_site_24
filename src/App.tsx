@@ -21,13 +21,9 @@ import Project3 from './pages/Project3'
 import useStorage from './useStorage'
 
 
-// import { storage } from './firebaseConfig';
-
-// import { ref, getDownloadURL } from 'firebase/storage';
-
 function App() {
 
-  const { data, error } = useStorage();  // Use the hook to get data and error
+  const { data, error } = useStorage();
 
   if (error) {
     console.error('Error loading storage:', error);
