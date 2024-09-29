@@ -18,28 +18,24 @@ import Project2 from './pages/Project2'
 import Project3 from './pages/Project3'
 
 
+import useStorage from './useStorage'
 
-import { storage } from './firebaseConfig';
 
-import { ref, getDownloadURL } from 'firebase/storage';
+// import { storage } from './firebaseConfig';
+
+// import { ref, getDownloadURL } from 'firebase/storage';
 
 function App() {
 
-  useEffect(() => {
+  const { data, error } = useStorage();  // Use the hook to get data and error
 
-    const storageRef = ref(storage, 'test/4_13 Resume .pdf');
-    console.log({storageRef})
+  if (error) {
+    console.error('Error loading storage:', error);
+  }
 
-    getDownloadURL(storageRef)
-      .then((url) => {
-        // setImageUrl(url);
-        console.log(url)
-      })
-      .catch((error) => {
-        console.error('Error getting download URL:', error);
-      });
+  console.log({ data });
 
-  }, []);
+
 
   return (
     <RouterProvider
