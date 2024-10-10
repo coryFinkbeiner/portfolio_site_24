@@ -11,7 +11,6 @@ function useStorage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // const storageRef = ref(storage, 'test/4_13 Resume .pdf');
     const folderRef = ref(storage, 'test');
 
 
@@ -21,12 +20,10 @@ function useStorage() {
         const fileUrls = {};
 
         res.items.forEach((itemRef) => {
-          // Get the download URL for each file
           getDownloadURL(itemRef)
             .then((url) => {
-              // Store the URL in the fileUrls object using the file name as the key
               fileUrls[itemRef.name] = url;
-              setData(fileUrls); // Update the state with the new file URLs
+              setData(fileUrls);
             })
             .catch((err) => {
               console.error('Error getting download URL:', err);
@@ -38,26 +35,6 @@ function useStorage() {
         console.error('Error listing files:', err);
         setError(err);
       });
-
-
-
-
-
-
-
-    // getDownloadURL(storageRef)
-    //   .then((url) => {
-    //     // setData((prevData) => ({
-    //     //   ...prevData,
-    //     //   resume: url, // Only update the 'resume' key
-    //     // }));
-    //     console.log({url})
-
-    //   })
-    //   .catch((err) => {
-    //     console.error('Error getting download URL:', err);
-    //     setError(err)
-    //   });
 
   }, []);
 
