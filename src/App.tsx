@@ -29,7 +29,7 @@ function App() {
     console.error('Error loading storage:', error);
   }
 
-  console.log({ data });
+  // console.log({ data });
 
 
   return (

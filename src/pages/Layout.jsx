@@ -18,9 +18,12 @@ function Layout() {
 
       <div style={{
         overflow: 'auto', // Enable scrolling for Outlet content
-        height: '100%' // Ensure the Outlet container takes full height
+        height: '100%', // Ensure the Outlet container takes full height
+        // minHeight: '100%',
       }}>
+
         <Outlet />
+
       </div>
     </div>
   )

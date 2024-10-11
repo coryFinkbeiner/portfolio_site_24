@@ -6,6 +6,34 @@ import React from 'react'
 
 function Resume() {
 
+
+  const downloadButtonStyle = {
+    position: 'fixed',
+    top: '20px',
+    right: '20px',
+    backgroundColor: '#bb86fc',
+    color: '#121212',
+    border: 'none',
+    borderRadius: '50%',
+    width: '48px',
+    height: '48px',
+    cursor: 'pointer',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    boxShadow: '0 2px 5px rgba(187, 134, 252, 0.3)',
+    zIndex: 1000,
+    position: 'absolute',
+    top: '20px',
+    right: '20px',
+  };
+
+  const handleDownload = () => {
+    // Download functionality will be added here
+    console.log('Download button clicked');
+  };
+
+
   const styles = {
     body: {
       backgroundColor: '#121212',
@@ -13,6 +41,7 @@ function Resume() {
       fontFamily: 'Arial, sans-serif',
       lineHeight: 1.6,
       padding: '20px',
+      position: 'relative',
     },
     resume: {
       maxWidth: '800px',
@@ -69,6 +98,12 @@ function Resume() {
             <a href="https://github.com/coryFinkbeiner" style={styles.a}>github.com/coryFinkbeiner</a>
           </p>
         </header>
+
+        <button onClick={handleDownload} style={downloadButtonStyle} aria-label="Download Resume">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          </svg>
+        </button>
 
         <section style={styles.section}>
           <h2 style={styles.h2}>Technical Skills</h2>
@@ -138,9 +173,6 @@ function Resume() {
         </section>
       </div>
     );
-
-
-
 
 
 }
