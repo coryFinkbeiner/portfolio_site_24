@@ -6,7 +6,6 @@ import React from 'react'
 
 function Resume() {
 
-
   const downloadButtonStyle = {
     position: 'fixed',
     top: '20px',
@@ -28,11 +27,11 @@ function Resume() {
     right: '20px',
   };
 
-  const handleDownload = () => {
-    // Download functionality will be added here
-    console.log('Download button clicked');
-  };
 
+  const handleDownload = async () => {
+    const pdfUrl = 'https://docs.google.com/document/d/1YTIafxYtL-IGobp1_p8cOsnJMXdTOCR90fjLq8V-xRU/export?format=pdf';
+    window.open(pdfUrl, '_blank');
+  };
 
   const styles = {
     body: {

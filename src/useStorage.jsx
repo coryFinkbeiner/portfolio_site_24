@@ -11,7 +11,7 @@ function useStorage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const folderRef = ref(storage, 'test');
+    const folderRef = ref(storage, 'data');
 
 
     listAll(folderRef)
