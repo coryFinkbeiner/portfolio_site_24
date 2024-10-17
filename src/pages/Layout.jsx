@@ -11,15 +11,18 @@ function Layout() {
         width: '100vw',
         display: 'grid',
         gridTemplateColumns: '1fr 5.5fr',
-        overflow: 'hidden' // Prevent overall container from scrolling
+        overflow: 'hidden', // Prevent overall container from scrolling
+        minHeight: '93vh',
       }}
     >
-      <Sidebar />
+
+
+        <Sidebar />
+
 
       <div style={{
-        overflow: 'auto', // Enable scrolling for Outlet content
-        height: '100%', // Ensure the Outlet container takes full height
-        // minHeight: '100%',
+        overflow: 'auto',
+        height: '100%',
       }}>
 
         <Outlet />
